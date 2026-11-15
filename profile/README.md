@@ -39,6 +39,36 @@ ESP32-S3 and ESP32-P4 firmware are also independent projects. Shared concepts
 and file formats connect them; compatibility depends on exact SDK, kit and
 firmware versions and will be documented per release.
 
+## Control kit library and system configurators
+
+The Pro kit library is a central part of SedonaPro. It combines individual
+control components with configurable assemblies that build a system's internal
+blocks, I/O points and links from selected equipment options.
+
+| Configurator | Kit | Configuration and generated logic |
+| --- | --- | --- |
+| Air handling unit | `sproAhu` | Supply or supply/exhaust; water or electric heating; cooling, heat recovery, fan control, sensors and interlocks |
+| Pump station | `sproPumpSt` | 1–4 pumps; on/off, common or individual VFDs; PID, staging, duty/standby rotation, dry-running protection and optional feedback |
+| Heating substation | `sproHeatSt` | Up to two heating circuits, outdoor-reset curves, single or twin pumps, optional domestic hot water, circulation, make-up and common alarm |
+
+**How it works:** add the configurator, select the equipment and options, then
+invoke **Build**. The assembly creates the required components and connections.
+Where supported, its kit-supplied widget offers setup and operation views.
+Compatible SDK, kit manifests and editor support are required; support must be
+verified separately for each editor edition.
+
+A rebuild retains existing blocks of the same type and their settings, adds
+required parts and removes obsolete generated parts. Custom logic belongs next
+to the generated assembly. Automatic channel assignment reports the I/O list
+and points left without a board channel; it does not replace electrical design
+or commissioning.
+
+The underlying library includes signal conditioning, PID and sequencing,
+equipment control, alarms, schedules, HVAC, heating, energy functions and plant
+simulation. Domain packs (`control`, `pumps`, `hvac`, `heat`, `energy`) select
+related kits for a build. The library currently lives in the **sedonapro** source
+project; it is distinct from graphical screen-symbol libraries.
+
 ## What you can explore
 
 - **Control logic:** connected function blocks, formulas, schedules, signal
