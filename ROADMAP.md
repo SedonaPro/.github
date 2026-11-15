@@ -24,3 +24,29 @@
 - Publish tested examples and board reports from contributors.
 
 No release dates or platform guarantees are implied by this roadmap.
+
+## Where we want to take SedonaPro
+
+Our ambition is a broader automation ecosystem: more controller platforms,
+more ways to connect equipment, a growing control and simulation kit library,
+and **SedonaPro SCADA** as a dedicated operator environment.
+
+These are development directions, not announcements of completed drivers or
+committed delivery dates. Scope and priorities will evolve with contributors,
+available hardware and real application needs.
+
+| Direction | Planned work |
+| --- | --- |
+| More controllers | Port the runtime and HAL to additional embedded and industrial platforms; document board support, toolchains and tested I/O |
+| Building-automation networks | Explore BACnet/IP, BACnet MS/TP, N2 Open and KNX integrations, including the required transports, hardware interfaces and interoperability tests |
+| REST and other drivers | Develop HTTP/REST integrations, gateways and additional equipment drivers around clear data models and documented interfaces |
+| SedonaPro SCADA | Grow the existing screens, live bindings, commands, alarms, trends and history into a dedicated operator environment, including standalone station operation and user/role management |
+| More control kits | Expand reusable libraries for HVAC, heating, pumps, energy, equipment, sequencing and system configurators |
+| Object and plant models | Add models of physical processes, equipment, sensors and actuators, with configurable dynamics, disturbances and fault scenarios |
+| Offline engineering | Develop and debug control logic without physical equipment: local simulation, accelerated model time, repeatable scenarios, regression checks and clear diagnostics |
+| Shared engineering resources | Grow example applications, graphical libraries, documentation, translations and reusable test cases across tools |
+
+A useful contribution can be a driver prototype, a board port, a validated
+plant model or a well-documented offline test scenario. Bring ideas to
+[community Discussions](https://github.com/SedonaPro/.github/discussions/categories/ideas)
+so we can agree on interfaces and avoid duplicating work.
