@@ -7,6 +7,12 @@
 - English project descriptions, contribution guides and issue/PR templates.
 - Community Discussions for questions, ideas and showcases.
 
+## First public source preview
+
+- [SedonaPro](https://github.com/SedonaPro/sedonapro): runtime, Pro kits, SDK, simulation and web editor.
+- Staged amd64 validation: 126,101 offline VM assertions and 42 web-editor tests passed.
+- Independent Studio and ESP source publication remains pending.
+
 ## Source preparation
 
 1. Preserve source history and Windows snapshot provenance privately.

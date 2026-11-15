@@ -200,11 +200,17 @@ an explanatory caption directly below the image.
 
 ## Current status
 
-The community home is public. The five source repositories are currently private
-while their publication snapshots are reviewed. Source histories from Linux and
-an independent Windows 0.7.0 snapshot have been preserved in separate branches.
-Public source links and downloadable releases will follow project by project,
-with build instructions, dependency information and stated test coverage.
+The **[SedonaPro source preview is public](https://github.com/SedonaPro/sedonapro)**:
+portable runtime, Pro kits, system configurators, SDK tooling, simulation and the
+web editor. Start with its [quick start](https://github.com/SedonaPro/sedonapro/blob/main/docs/quickstart_EN.md)
+and [validation report](https://github.com/SedonaPro/sedonapro/blob/main/docs/source-preview-validation.md).
+The staged amd64 build passed runtime smoke checks, 126,101 offline VM assertions
+and 42 web-editor tests; see the report for exclusions.
+
+The separate Linux/Windows Studio and ESP32-S3/P4 repositories remain private
+while licensing and publication preparation are completed. Their histories and
+the independent Windows 0.7.0 snapshot are preserved. Downloadable application
+and firmware releases will be announced separately after their own checks.
 
 See the [launch roadmap](https://github.com/SedonaPro/.github/blob/main/ROADMAP.md).
 There is no release date or universal hardware-support promise at this stage.
