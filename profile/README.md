@@ -2,9 +2,13 @@
 
 ### Build control logic. See it run. Bring it to hardware.
 
-SedonaPro is a community for people who enjoy Sedona and want to make visual
-control engineering more accessible: automation engineers, software developers,
-electronics makers, students and people learning by building.
+SedonaPro is a community of Sedona enthusiasts building an open, practical
+platform for automation. We bring together control engineers, software developers,
+electronics makers and curious learners to develop tools, share experience and
+turn ideas into working control systems.
+
+Whether you are exploring your first function-block diagram or designing your
+own controller, there is room to experiment, ask questions and contribute.
 
 Our work spans the whole path from an idea to a running controller: a portable
 runtime and reusable control kits, desktop tools for Linux and Windows, a browser-based
