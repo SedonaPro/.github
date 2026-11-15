@@ -58,6 +58,26 @@ correctness, compiler compatibility and reliable native integration are central
 to the project. These changes are backed by existing runtime and integration
 tests; publication builds will document their exact verification results.
 
+## Protocol and communication improvements
+
+We have also improved the communication stack and the way engineering tools
+use it, with a focus on reliable transfers, live sessions and portable clients.
+
+| Area | Improvements in our development lines |
+| --- | --- |
+| SOX file transfers | Fixed a race between the receiver and caller threads in the Java client's chunk queue, which could corrupt the queue, lose chunks and cause transfer timeouts |
+| Read recovery in Linux Studio | Releases an abandoned file transfer before retrying a failed read, with at most three attempts; device writes are not automatically retried |
+| Larger application schemas | Our Studio and web clients request a 1024-byte DASP packet limit for the Pro profile; older clients must be checked for compatibility |
+| Device-provided resources | SOX access to kit manifests and widget resources lets supporting editors obtain the metadata and views associated with the installed kit builds |
+| Web live sessions | Fixed a watch-renewal race during configurator rebuilds: components removed by a rebuild are excluded from the watch list instead of ending the live session |
+| Operator-screen transfer | The web gateway writes the screen package as a separate device file and checks its bytes by reading it back; concurrent file transfer and device mutations are coordinated |
+| MQTT | A non-blocking MQTT 3.1.1 client polled by the VM, with QoS 0/1, retained messages, last will, keep-alive, reconnect backoff and subscription restoration; shared implementation for Linux, simulation and ESP-IDF |
+
+These include protocol-client fixes and editor/gateway behaviour, not a claim
+that every feature changes the SOX/DASP wire format. Support differs by editor,
+SDK and firmware version. Existing source tests cover relevant scenarios;
+release-specific results will accompany verified builds.
+
 ## Web editor and an emerging SCADA environment
 
 The **web editor** brings visual Sedona engineering to the browser: navigate
