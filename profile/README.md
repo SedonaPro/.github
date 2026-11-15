@@ -6,9 +6,11 @@ SedonaPro is a community for people who enjoy Sedona and want to make visual
 control engineering more accessible: automation engineers, software developers,
 electronics makers, students and people learning by building.
 
-Our work spans the whole path from an idea to a running controller: a compatible
-runtime and reusable control kits, desktop tools for Linux and Windows, firmware
-for ESP32-S3 and ESP32-P4, simulation, and practical examples for building automation.
+Our work spans the whole path from an idea to a running controller: a portable
+runtime and reusable control kits, desktop tools for Linux and Windows, a browser-based
+web editor, firmware, simulation and practical examples for building automation.
+Sedona can be ported to many controller platforms with suitable resources and a
+platform adaptation layer; Linux, ESP32-S3 and ESP32-P4 are our current development targets.
 You can explore an algorithm on a computer, watch signals change, develop your
 own components and work toward an application on a supported board.
 
@@ -38,6 +40,24 @@ Linux and Windows editors have separate repositories and release tracks.
 ESP32-S3 and ESP32-P4 firmware are also independent projects. Shared concepts
 and file formats connect them; compatibility depends on exact SDK, kit and
 firmware versions and will be documented per release.
+
+## Web editor and an emerging SCADA environment
+
+The **web editor** brings visual Sedona engineering to the browser: navigate
+applications, edit function-block diagrams and properties, inspect live values,
+and create graphical views through a Java server and React interface. Its source
+currently lives in `sedonapro/editor/`.
+
+Beyond diagram engineering, we have built much of an operator environment:
+graphical screens, reusable equipment symbols and components, live bindings,
+operator commands and trends. Linux Studio also has an optional SCADA module
+with alarm handling, acknowledgement, an event journal and stored value history.
+Features differ between the web, Linux and Windows editions.
+
+**Almost a SCADA:** a substantial foundation is already implemented, while
+standalone station operation without the editor and user/role management remain
+unfinished. We describe the available pieces explicitly rather than presenting
+this as a complete SCADA product.
 
 ## Control kit library and system configurators
 
