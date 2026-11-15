@@ -45,6 +45,19 @@ ESP32-S3 and ESP32-P4 firmware are also independent projects. Shared concepts
 and file formats connect them; compatibility depends on exact SDK, kit and
 firmware versions and will be documented per release.
 
+## Modernizing the runtime
+
+A major part of this work is bringing the runtime to **64-bit Linux (amd64)**
+and fixing issues exposed by the port. Changes include reference-size-aware
+field layout, null-pointer initialization, VM stack handling across native
+calls, UDP structure layout and pointer-safe native interfaces, including
+Modbus handles. The build tooling has also been updated for Python 3.
+
+SedonaPro is therefore more than a collection of board ports: runtime
+correctness, compiler compatibility and reliable native integration are central
+to the project. These changes are backed by existing runtime and integration
+tests; publication builds will document their exact verification results.
+
 ## Web editor and an emerging SCADA environment
 
 The **web editor** brings visual Sedona engineering to the browser: navigate
