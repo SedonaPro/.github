@@ -24,6 +24,14 @@ Public source links, build instructions, verified screenshots and releases will
 be added as each project completes its publication review. Linux and Windows
 editors are separate projects; ESP32-S3 and ESP32-P4 firmware are separate too.
 
+## A look inside
+
+![Linux Studio operator-screen demonstration](https://raw.githubusercontent.com/SedonaPro/.github/main/profile/images/linux-operator-demo.png)
+
+An existing Linux Studio demo: air handling and heating overview, live indicators
+and a short trend. Demo labels are in Russian. This is a software demonstration,
+not a photograph or an electrical acceptance test.
+
 ## Join in
 
 - [Introduce yourself or ask a question](https://github.com/SedonaPro/.github/discussions).
