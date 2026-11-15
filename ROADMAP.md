@@ -33,13 +33,15 @@ and **SedonaPro SCADA** as a dedicated operator environment.
 
 These are development directions, not announcements of completed drivers or
 committed delivery dates. Scope and priorities will evolve with contributors,
-available hardware and real application needs.
+available hardware and real application needs. The protocols and platforms listed
+below are examples, not a closed list: further integrations and kit domains are
+welcome as the community grows.
 
 | Direction | Planned work |
 | --- | --- |
 | More controllers | Port the runtime and HAL to additional embedded and industrial platforms; document board support, toolchains and tested I/O |
-| Building-automation networks | Explore BACnet/IP, BACnet MS/TP, N2 Open and KNX integrations, including the required transports, hardware interfaces and interoperability tests |
-| REST and other drivers | Develop HTTP/REST integrations, gateways and additional equipment drivers around clear data models and documented interfaces |
+| Building-automation networks | Explore BACnet/IP, BACnet MS/TP, N2 Open, KNX and other protocols, including the required transports, hardware interfaces and interoperability tests |
+| REST and other drivers | Develop HTTP/REST integrations, gateways and other protocol and equipment drivers around clear data models and documented interfaces |
 | SedonaPro SCADA | Grow the existing screens, live bindings, commands, alarms, trends and history into a dedicated operator environment, including standalone station operation and user/role management |
 | More control kits | Expand reusable libraries for HVAC, heating, pumps, energy, equipment, sequencing and system configurators |
 | Object and plant models | Add models of physical processes, equipment, sensors and actuators, with configurable dynamics, disturbances and fault scenarios |
