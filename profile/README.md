@@ -1,57 +1,110 @@
 # SedonaPro
 
-### Open automation. Visual engineering. Real hardware.
+### Build control logic. See it run. Bring it to hardware.
 
-A community for people who enjoy building with Sedona: control engineers,
-embedded developers, electronics makers and curious learners.
+SedonaPro is a community for people who enjoy Sedona and want to make visual
+control engineering more accessible: automation engineers, software developers,
+electronics makers, students and people learning by building.
 
-We are bringing together a compatible runtime, visual editors, ESP32 firmware
-and practical control examples. Start on a computer, understand the diagram,
-then take the same ideas to hardware.
+Our work spans the whole path from an idea to a running controller: a compatible
+runtime and reusable control kits, desktop tools for Linux and Windows, firmware
+for ESP32-S3 and ESP32-P4, simulation, and practical examples for building automation.
+You can explore an algorithm on a computer, watch signals change, develop your
+own components and work toward an application on a supported board.
 
-## Find your project
+## Visual engineering in action
 
-| Project | Focus |
-| --- | --- |
-| SedonaPro Runtime | VM, kits, SDK, build tooling and simulation |
-| Sedona Studio for Linux | Linux desktop editor and operator screens |
-| Sedona Studio for Windows | Windows desktop editor and native-kit workshop |
-| Sedona for ESP32-S3 | ESP32-S3 firmware and board support |
-| Sedona for ESP32-P4 | ESP32-P4 controller firmware and Ethernet hardware |
+![Sedona Studio Windows: live block diagram, signal panel and trends](https://raw.githubusercontent.com/SedonaPro/.github/main/profile/images/windows-live-engineering.png)
 
-**Launch status:** the source repositories are being prepared privately.
-Public source links, build instructions, verified screenshots and releases will
-be added as each project completes its publication review. Linux and Windows
-editors are separate projects; ESP32-S3 and ESP32-P4 firmware are separate too.
+**Sedona Studio Windows 0.7.0 — live engineering with an English interface.**
+Two ramp generators feed an adder and a formula component. The canvas shows
+typed ports, connections and live values; the right-hand panel displays a watched
+output, and the trend view below compares selected signals over time. The tree
+on the left provides access to the application's folders and components. This
+user-supplied screenshot shows a connection to a local runtime; it illustrates
+the Windows edition, whose features can differ from the Linux edition.
 
-## A look inside
+## Five projects, clear responsibilities
 
-![Linux Studio operator-screen demonstration](https://raw.githubusercontent.com/SedonaPro/.github/main/profile/images/linux-operator-demo.png)
+| Project | What you will find | Who it is for |
+| --- | --- | --- |
+| **SedonaPro** · `sedonapro` | VM, compiler, SDK tooling, reusable `spro*` kits, profiles, simulation and the current web editor | Runtime developers, control engineers and kit authors |
+| **Sedona Studio for Linux** · `sedona-studio-linux` | Desktop diagram engineering, local simulation, kit tooling and optional operator screens, alarms and value history | Linux users developing and exploring applications |
+| **Sedona Studio for Windows** · `sedona-studio-windows` | Desktop diagram engineering, live diagnostics, local simulation and a native C kit workshop | Windows users who want an integrated engineering workflow |
+| **Sedona for ESP32-S3** · `sedona-esp32-s3` | ESP-IDF integration, platform services, SOX connectivity and simulator tooling | Embedded developers working with ESP32-S3 |
+| **Sedona for ESP32-P4** · `sedona-esp32-p4` | Ethernet controller firmware, I/O services, Modbus, MQTT and update tooling | Firmware developers and controller-board designers |
 
-An existing Linux Studio demo: air handling and heating overview, live indicators
-and a short trend. Demo labels are in Russian. This is a software demonstration,
-not a photograph or an electrical acceptance test.
+Linux and Windows editors have separate repositories and release tracks.
+ESP32-S3 and ESP32-P4 firmware are also independent projects. Shared concepts
+and file formats connect them; compatibility depends on exact SDK, kit and
+firmware versions and will be documented per release.
 
-## Join in
+## What you can explore
 
-- [Introduce yourself or ask a question](https://github.com/SedonaPro/.github/discussions).
-- Share a control diagram, a simulator experiment or a board you are building.
-- Help with firmware, editor usability, documentation or translations.
-- Reproduce a problem and contribute a small, testable improvement.
+- **Control logic:** connected function blocks, formulas, schedules, signal
+  processing and reusable control components.
+- **Building automation:** heating, ventilation, pumps, equipment sequencing,
+  alarms and simulated plant models in the Pro kit collection.
+- **Visual tools:** application navigation, component properties, live values,
+  trends and project files you can keep under version control.
+- **Embedded development:** board support, platform services, communication
+  protocols and the path from a host-side experiment to firmware.
+- **Your own kits:** small reusable components, source examples and native
+  extensions where the target supports them.
 
-English is the reference language for documentation and contributions.
-Questions in Russian are welcome; a short English summary helps everyone join in.
+These are areas covered by the projects collectively. Features and hardware
+support vary by edition and target; a screenshot is not a compatibility matrix.
 
-## How we work
+## Find your starting point
 
-We prefer reproducible examples, clear compatibility information and honest
-test reports. A simulator result is not a hardware test. Every hardware project
-will document what board, SDK, firmware and I/O have actually been tested.
+**Learning Sedona?** Start with a small simulator example: a signal source,
+a calculation and a trend. Ask questions and share what you learned.
 
-See our [contribution guide](https://github.com/SedonaPro/.github/blob/main/CONTRIBUTING.md),
-[community guidelines](https://github.com/SedonaPro/.github/blob/main/CODE_OF_CONDUCT.md)
-and [support guide](https://github.com/SedonaPro/.github/blob/main/SUPPORT.md).
+**Already an automation engineer?** Bring a reusable control pattern, a clear
+application example or feedback on the engineering workflow.
+
+**Building boards or firmware?** Tell us the exact board, chip and toolchain.
+Help turn board-specific experiments into documented, reproducible support.
+
+**Writing tools or kits?** Discuss the interface or format first, then contribute
+a focused change with an example others can build and test.
+
+## Join the community
+
+- [Q&A](https://github.com/SedonaPro/.github/discussions/categories/q-a) — ask about concepts, tools and workflows.
+- [Show and tell](https://github.com/SedonaPro/.github/discussions/categories/show-and-tell) — share diagrams, boards and experiments.
+- [Ideas](https://github.com/SedonaPro/.github/discussions/categories/ideas) — discuss improvements before a large change.
+- [Announcements](https://github.com/SedonaPro/.github/discussions/categories/announcements) — follow project news and release announcements.
+- [Introduce yourself](https://github.com/SedonaPro/.github/discussions/1) — tell us what you are building.
+
+Documentation, minimal reproductions, example diagrams, board testing and
+translations are valuable contributions alongside code. English is the reference
+language. Questions in Russian are welcome; an English summary helps more people
+participate. Public screenshots use English interface text and demo labels, with
+an explanatory caption directly below the image.
+
+## Current status
+
+The community home is public. The five source repositories are currently private
+while their publication snapshots are reviewed. Source histories from Linux and
+an independent Windows 0.7.0 snapshot have been preserved in separate branches.
+Public source links and downloadable releases will follow project by project,
+with build instructions, dependency information and stated test coverage.
+
+See the [launch roadmap](https://github.com/SedonaPro/.github/blob/main/ROADMAP.md).
+There is no release date or universal hardware-support promise at this stage.
+
+## Engineering and collaboration
+
+We value small reproducible examples, explicit versions and useful test evidence.
+Simulator checks, on-board software checks and electrical I/O acceptance are
+reported separately. Contributions go through focused branches and review;
+upstream attribution and third-party licences stay with their components.
+
+Read [Contributing](https://github.com/SedonaPro/.github/blob/main/CONTRIBUTING.md),
+[Support](https://github.com/SedonaPro/.github/blob/main/SUPPORT.md) and the
+[community guidelines](https://github.com/SedonaPro/.github/blob/main/CODE_OF_CONDUCT.md).
 
 SedonaPro is an independent community project, not affiliated with or endorsed
-by Tridium. Upstream attribution and component licences are retained in each
-source project.
+by Tridium. Component licences and upstream notices are documented in the
+individual source projects.
