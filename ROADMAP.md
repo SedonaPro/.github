@@ -11,9 +11,10 @@
 
 - [SedonaPro](https://github.com/SedonaPro/sedonapro): runtime, Pro kits, SDK, simulation and web editor.
 - Staged amd64 validation: 126,101 offline VM assertions and 42 web-editor tests passed.
-- Independent Studio and ESP source publication remains pending.
+- Independent Linux/Windows Studio and ESP32-S3/P4 source previews are public.
+- Source-build CI is configured for the independent editors and ports.
 
-## Source preparation
+## Next source and release work
 
 1. Preserve source history and Windows snapshot provenance privately.
 2. Review each publication snapshot, dependencies and upstream notices.

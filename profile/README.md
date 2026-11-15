@@ -34,11 +34,11 @@ the Windows edition, whose features can differ from the Linux edition.
 
 | Project | What you will find | Who it is for |
 | --- | --- | --- |
-| **SedonaPro** · `sedonapro` | VM, compiler, SDK tooling, reusable `spro*` kits, profiles, simulation and the current web editor | Runtime developers, control engineers and kit authors |
-| **Sedona Studio for Linux** · `sedona-studio-linux` | Desktop diagram engineering, local simulation, kit tooling and optional operator screens, alarms and value history | Linux users developing and exploring applications |
-| **Sedona Studio for Windows** · `sedona-studio-windows` | Desktop diagram engineering, live diagnostics, local simulation and a native C kit workshop | Windows users who want an integrated engineering workflow |
-| **Sedona for ESP32-S3** · `sedona-esp32-s3` | ESP-IDF integration, platform services, SOX connectivity and simulator tooling | Embedded developers working with ESP32-S3 |
-| **Sedona for ESP32-P4** · `sedona-esp32-p4` | Ethernet controller firmware, I/O services, Modbus, MQTT and update tooling | Firmware developers and controller-board designers |
+| **[SedonaPro](https://github.com/SedonaPro/sedonapro)** | VM, compiler, SDK tooling, reusable `spro*` kits, profiles, simulation and the current web editor | Runtime developers, control engineers and kit authors |
+| **[Sedona Studio for Linux](https://github.com/SedonaPro/sedona-studio-linux)** | Desktop diagram engineering, local simulation, kit tooling and optional operator screens, alarms and value history | Linux users developing and exploring applications |
+| **[Sedona Studio for Windows](https://github.com/SedonaPro/sedona-studio-windows)** | Desktop diagram engineering, live diagnostics, local simulation and a native C kit workshop | Windows users who want an integrated engineering workflow |
+| **[Sedona for ESP32-S3](https://github.com/SedonaPro/sedona-esp32-s3)** | ESP-IDF integration, platform services, SOX connectivity and simulator tooling | Embedded developers working with ESP32-S3 |
+| **[Sedona for ESP32-P4](https://github.com/SedonaPro/sedona-esp32-p4)** | Ethernet controller firmware, I/O services, Modbus, MQTT and update tooling | Firmware developers and controller-board designers |
 
 Linux and Windows editors have separate repositories and release tracks.
 ESP32-S3 and ESP32-P4 firmware are also independent projects. Shared concepts
@@ -207,10 +207,15 @@ and [validation report](https://github.com/SedonaPro/sedonapro/blob/main/docs/so
 The staged amd64 build passed runtime smoke checks, 126,101 offline VM assertions
 and 42 web-editor tests; see the report for exclusions.
 
-The separate Linux/Windows Studio and ESP32-S3/P4 repositories remain private
-while licensing and publication preparation are completed. Their histories and
-the independent Windows 0.7.0 snapshot are preserved. Downloadable application
-and firmware releases will be announced separately after their own checks.
+All five projects now have public source previews. The Linux and Windows
+editors passed source-build and core tests; Linux also passed headless GUI
+checks. The S3 and P4 Sedona-side image builds passed using their included
+runtime sources. Each repository documents its verification scope.
+
+Project-authored code in the independent editors and ports uses Apache-2.0;
+framework and third-party components retain their own licences. Historical
+development commits remain private. Downloadable application and firmware
+releases will be announced separately after their own checks.
 
 See the [launch roadmap](https://github.com/SedonaPro/.github/blob/main/ROADMAP.md).
 There is no release date or universal hardware-support promise at this stage.
